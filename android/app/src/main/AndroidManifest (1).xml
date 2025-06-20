@@ -2,9 +2,10 @@
     package="com.example.tanourine">
 
     <application
-        android:label="tanourine"
         android:name="${applicationName}"
+        android:label="tanourine"
         android:icon="@mipmap/ic_launcher">
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -19,9 +20,10 @@
                 android:value="2" />
 
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
