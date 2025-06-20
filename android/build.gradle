@@ -1,28 +1,21 @@
-buildscript {
-    ext.kotlin_version = '1.8.10'  // تأكد من توافق النسخة مع ملف app/build.gradle
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.0' // نسخة حديثة مناسبة
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        // NOTE: لا تضف هنا classpath لأي شيء آخر خاص بـ Flutter
-    }
-}
+android {
+    compileSdkVersion 33
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
+    defaultConfig {
+        applicationId "com.example.tanourine"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
     }
-}
 
-rootProject.buildDir = '../build'
-subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 }
